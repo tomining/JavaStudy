@@ -50,6 +50,6 @@ public class JsonViewTest {
 			)
 			.build();
 
-		parser.printPrettyJson(album, ViewModel.DetailView.class);
+		parser.printPrettyJson(album, ViewModel.SummaryView.class);
 	}
 }

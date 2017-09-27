@@ -2,6 +2,7 @@ package tomining.java.json.jackson;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import tomining.java.json.jackson.jsonview.ViewModel;
 
@@ -15,6 +16,10 @@ import java.io.IOException;
  */
 public class JacksonJsonParser {
     private static final ObjectMapper MAPPER = new ObjectMapper();
+
+    static {
+        MAPPER.configure(MapperFeature.DEFAULT_VIEW_INCLUSION, false);
+    }
 
     public <T> T readValue(String jsonStr, Class<T> clazz) throws IOException {
         if (StringUtils.isBlank(jsonStr)) {

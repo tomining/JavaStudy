@@ -12,9 +12,12 @@ import lombok.Data;
 @Builder
 public class Track {
 	private String trackId;
+	@JsonView(ViewModel.DefaultView.class)
 	private String trackTitle;
+	@JsonView(ViewModel.DefaultView.class)
 	private String trackNo;
+	@JsonView(ViewModel.SummaryView.class)
 	private String genre;
-	@JsonView({ViewModel.DetailV3View.class, ViewModel.DetailV2View.class})
+	@JsonView(ViewModel.DetailView.class)
 	private Singer singer;
 }

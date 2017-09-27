@@ -11,7 +11,9 @@ import lombok.Data;
 @Data
 @Builder
 public class Singer {
+	@JsonView(ViewModel.DetailView.class)
 	private String name;
+	@JsonView(ViewModel.SummaryView.class)
 	private String nickname;
 	@JsonView(ViewModel.DetailView.class)
 	private String managementCompany;
