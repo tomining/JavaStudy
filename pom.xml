@@ -22,7 +22,7 @@
 
     <properties>
         <junit_version>4.12</junit_version>
-        <jackson_version>2.8.6</jackson_version>
+        <jackson_version>2.12.7.1</jackson_version>
         <gson_version>2.2.4</gson_version>
         <lombok_version>LATEST</lombok_version>
     </properties>
